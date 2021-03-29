@@ -24,13 +24,17 @@ int main()
             if(max!=c[i])
                 continue;
             imax=i;
-            k++;
             break;
 
         }
+        for(i=1; i<=n; i++)
+        {
+            if(max==c[i])
+                k++;
+        }
 
         printf("%d ",imax);
-        if(k>0)
+        if(k>1)
             printf("%d",max);
     }
 
