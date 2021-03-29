@@ -9,6 +9,7 @@ int main()
         for(i=1; i<=n; i++)
         {
             scanf("%d",&c[i]);
+            if(c[i]>0&&c[i]<=10000);
         }
         for(i=1; i<=n; i++)
         {
@@ -20,16 +21,16 @@ int main()
         }
         for(i=1; i<=n; i++)
         {
-            if(max==c[i])
-            {
-                imax=i;
-                k++;
-                break;
-            }
+            if(max!=c[i])
+                continue;
+            imax=i;
+            k++;
+            break;
+
         }
 
         printf("%d ",imax);
-        if(k>1)
+        if(k>0)
             printf("%d",max);
     }
 
